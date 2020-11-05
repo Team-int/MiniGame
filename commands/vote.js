@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const { send } = require('process');
-const sys= require('sys');
+const sys= require('util');
 const fs = require('fs');
 
 

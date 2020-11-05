@@ -1,10 +1,20 @@
-const React =require('react');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const setting = require('./setting.json');
 const fs = require('fs');
+const sys = require("util");
+const express = require('express');
+const http = require('http');
+
+let app = express();
+app.get('/', function(req, res){
+    res.send("<h1>int 미니게임봇</h1>");
+    
+});
+app.listen(80);
 
 client.commands = new Discord.Collection();
+
 
 client.commands.load = dir => {
     for (const file of fs.readdirSync(dir)) {
