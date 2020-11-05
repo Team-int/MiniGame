@@ -9,7 +9,6 @@ const http = require('http');
 let app = express();
 app.get('/', function(req, res){
     res.send("<h1>int 미니게임봇</h1>");
-    
 });
 app.listen(80);
 
