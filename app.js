@@ -1,6 +1,6 @@
 const React =require('react');
-const Discord = require('discord');
-const client = Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const setting = require('./setting.json');
 const fs = require('fs');
 
@@ -23,7 +23,7 @@ client.on('ready', ()=>{
     console.log(`ready, Log in as ${client.user.tag}.`);
 });
 
-client.on('message', ()=>{
+client.on('message', (msg)=>{
     if (msg.author.bot) return;
     if (!msg.content.startsWith(prefix)) return;
     if (msg.content.slice(0, prefix.length) !== prefix) return;
@@ -36,4 +36,4 @@ client.on('message', ()=>{
     if(cmdC) cmdC.run(client, msg, args);
 });
 
-client.run(setting.token);
+client.login(setting.token);
