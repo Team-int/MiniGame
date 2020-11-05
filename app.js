@@ -7,8 +7,10 @@ const express = require('express');
 const http = require('http');
 
 let app = express();
+app.set('view engine', 'pug');
+
 app.get('/', function(req, res){
-    res.send("<h1>int 미니게임봇</h1>");
+    res.render("index", {title:"Int 미니게임봇", title2: "Int 미니게임봇"});
 });
 app.listen(80);
 
