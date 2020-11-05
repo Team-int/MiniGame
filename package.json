@@ -1,0 +1,26 @@
+{
+  "name": "minigame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "discord": "^0.8.2",
+    "glob": "^7.1.6",
+    "nodemon": "^2.0.6",
+    "react": "^17.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/int-Team/MiniGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/int-Team/MiniGame/issues"
+  },
+  "homepage": "https://github.com/int-Team/MiniGame#readme"
+}
