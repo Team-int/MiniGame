@@ -10,7 +10,11 @@ let app = express();
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res){
-    res.render("index", {title:"Int 미니게임봇", title2: "Int 미니게임봇"});
+    res.render("index");
+});
+app.get('/view/:sitename', function(req, res){
+    console.log(req.params.sitename);
+    res.render(req.params.sitename);
 });
 app.listen(80);
 
