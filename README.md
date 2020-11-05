@@ -23,5 +23,6 @@ exports.run = (client, msg, args) => {
 };
 exports.name = "명령어 이름";
 ```
-예시는 [commands][./commands/ping.js] 에 있습니다.
+예시는 [commands](./commands/ping.js) 에 있습니다.
 ## 웹사이트
+views 폴터에서 고칠 수 있습니다.
