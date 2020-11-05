@@ -13,7 +13,6 @@ app.get('/', function(req, res){
     res.render("index");
 });
 app.get('/view/:sitename', function(req, res){
-    console.log(req.params.sitename);
     res.render(req.params.sitename);
 });
 app.listen(80);
