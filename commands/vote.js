@@ -23,7 +23,7 @@ exports.run = (client, msg, args) => {
                 .setColor('#FF0000')
                 .setTitle(`${votemsg.embeds[0].title}`)
                 .setDescription(`${votemsg.embeds[0].title}에 관한 투표의 결과를 내보냅니다.`);
-    
+            
             for(var i=0; i<votemsg.embeds[0].fields.length-1; i++){
                 console.log(votemsg.embeds[0].fields[i].name);
                 console.log(votemsg.reactions.cache.get(votemsg.embeds[0].fields[i].value).count);
