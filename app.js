@@ -39,15 +39,33 @@ client.on('ready', ()=>{
 
 client.on('message', (msg)=>{
     if (msg.author.bot) return;
-    if (!msg.content.startsWith(prefix)) return;
-    if (msg.content.slice(0, prefix.length) !== prefix) return;
+    if (!msg.content.startsWith(prefix)){
+                setting.levels.find((element)=>{
+                    if(msg.author.id===element.id){
+                        element.exp++;
+                        return true;
+                    }
+                });
+                var levels = setting.levels;
+                var adOb = Object();
+                adOb.id=msg.author.id;
+                adOb.level=0;
+                adOb.exp=0;
+                levels.push(adOb);
+                setting.levels=levels;
+                console.log(setting);
+                fs.writeFileSync('setting.json', JSON.stringify(setting));
+        return;
+    }
+
+    if(msg.content.slice(0, prefix.length) !== prefix) return;
 
     const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 
     let cmdC = client.commands.get(cmd);
-
     if(cmdC) cmdC.run(client, msg, args);
+    
 });
 
 client.login(setting.token);
