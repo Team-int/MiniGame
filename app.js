@@ -40,12 +40,15 @@ client.on('ready', ()=>{
 client.on('message', (msg)=>{
     if (msg.author.bot) return;
     if (!msg.content.startsWith(prefix)){
-                setting.levels.find((element)=>{
+                if(setting.levels.find((element)=>{
                     if(msg.author.id===element.id){
                         element.exp++;
                         return true;
                     }
-                });
+                })){
+                    fs.writeFileSync('setting.json', JSON.stringify(setting));
+                    return;
+                }
                 var levels = setting.levels;
                 var adOb = Object();
                 adOb.id=msg.author.id;
