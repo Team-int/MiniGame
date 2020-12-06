@@ -43,6 +43,10 @@ client.on('message', (msg)=>{
                 if(setting.levels.find((element)=>{
                     if(msg.author.id===element.id){
                         element.exp++;
+                        if(element.level !== (element.exp - element.exp%100)/100+1){
+                            element.level=(element.exp - element.exp%100)/100+1;
+                            msg.channel.send(`${msg.author}님의 레벨이 ${element.level}이 되었습니다.`);
+                        }
                         return true;
                     }
                 })){
