@@ -60,5 +60,8 @@ exports.run = (client, msg, args) => {
             mymsg.edit(votes);
         });
     }
+    else{
+        msg.reply("3~11개의 매개변수가 필요합니다. \\vote 제목 값1 값2 형태로 해주세요.");
+    }
 };
 exports.name = "vote";
