@@ -1,7 +1,7 @@
 # MiniGame
 
 ## 참여자
-[허성범][https://github.com/heosungbum]
+[허성범](https://github.com/heosungbum)
 ## 설정
 
 app.js가 있는 폴더 내에 setting.json 파일이 있어야 작동할 수 있습니다.
