@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const setting = require('./setting.json');
+let setting = require('./setting.json');
 const fs = require('fs');
 const sys = require("util");
 const express = require('express');
@@ -51,6 +51,7 @@ client.on('message', (msg)=>{
                     }
                 })){
                     fs.writeFileSync('setting.json', JSON.stringify(setting));
+                    setting = require('./setting.json');
                     return;
                 }
                 var levels = setting.levels;
@@ -62,6 +63,7 @@ client.on('message', (msg)=>{
                 setting.levels=levels;
                 console.log(setting);
                 fs.writeFileSync('setting.json', JSON.stringify(setting));
+                setting = require('./setting.json');
         return;
     }
 
