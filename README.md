@@ -1,7 +1,7 @@
 # MiniGame
 
 ## 참여자
-
+@heosungbum
 
 ## 설정
 
