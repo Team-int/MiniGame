@@ -6,6 +6,7 @@
   "dependencies": {
     "discord": "^0.8.2",
     "discord.js": "^12.4.1",
+    "discord.js-snowflake": "^1.0.0-dev",
     "express": "^4.17.1",
     "glob": "^7.1.6",
     "nodemon": "^2.0.6",
